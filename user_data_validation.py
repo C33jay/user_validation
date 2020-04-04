@@ -49,27 +49,26 @@ else:
         your_password = input('Enter your password: ')
     else:
         print(your_password) 
+Any_other_customer = ''
+Any_other_customer = input('Any other customer? [Yes/No]')
+if Any_other_customer == 'Yes':
+    user_details_2 = {}
+    first_name_2 =input('Enter your first name: ')
+    user_details_2.update({ 'first_name2: ': first_name_2,})
+    last_name_2 = input('Enter your last name: ')
+    user_details_2.update({ 'last_name2: ': last_name_2, })
+    e_mail_2 = input('Enter your e_mail: ')
+    user_details_2.update({ 'e_mail2: ': e_mail_2})
 
-    Any_other_customer = ''
-    Any_other_customer = input('Any other customer? [Yes/No]')
-    if Any_other_customer == 'Yes':
-        user_details_2 = {}
-        first_name_2 =input('Enter your first name: ')
-        user_details_2.update({ 'first_name2: ': first_name_2,})
-        last_name_2 = input('Enter your last name: ')
-        user_details_2.update({ 'last_name2: ': last_name_2, })
-        e_mail_2 = input('Enter your e_mail: ')
-        user_details_2.update({ 'e_mail2: ': e_mail_2})
 
+    import random
+    char = 'qrstv' 
+    length = len(char)
+    result = ''
 
-        import random
-        char = 'qrstv' 
-        length = len(char)
-        result = ''
-
-        for blah in range(len(char)): 
-            x = random.randint(0,length - 1)
-            result += char[x]
+    for blah in range(len(char)): 
+        x = random.randint(0,length - 1)
+        result += char[x]
 
 
         password = first_name_2[0:2] + last_name_2[-2:] + result
@@ -95,10 +94,9 @@ else:
 
             else:
                     print(your_password)  
-
-    else:
-        for k ,v in user_details_1.items():
-             print(k +  v)        
+else:
+    for k ,v in user_details_1.items():
+        print(k +  v)        
     
     
 
